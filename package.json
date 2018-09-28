@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "src/index.js",
   "author": "Kirk Smith <kirk.s14@gmail.com>",
-  "license": "MIT",
+  "license": "none",
   "dependencies": {
     "express": "^4.16.3",
     "lodash": "^4.17.11",
