@@ -1,0 +1,19 @@
+{
+  "name": "ks-take-home",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "author": "Kirk Smith <kirk.s14@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.3",
+    "lodash": "^4.17.11",
+    "sqlite3": "^4.0.2"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "mocha src/utils.spec.js"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0"
+  }
+}
