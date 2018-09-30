@@ -54,7 +54,12 @@ getUserSql = (filters) => {
                  WHERE`;
 
   _.each(filters, (val, key) => {
-    userSql += ` ${key} IN ('${val.replace(/,/g, '\',\'')}') AND`
+    // This is to handle income values formatted like "100\,000+". We don't
+    // want to inadvertantly convert that to "100\','000+".
+    let newVal = val.replace('\\,', '*')
+                    .replace(/,/g, '\',\'')
+                    .replace('*', '\\,');
+    userSql += ` ${key} IN ('${newVal}') AND`;
   });
 
    if (_.endsWith(userSql, ' AND')) userSql = userSql.slice(0, -4);
